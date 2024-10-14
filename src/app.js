@@ -1,5 +1,8 @@
 import express from 'express';
 import morgan from 'morgan';
+// Importing routes
+import { router as postsRouter } from './modules/posts/routes/post.routes.js';
+import { router as contentBlockRouter } from './modules/posts/routes/contentBlock.routes.js';
 
 // Server initialization
 export const app = express();
@@ -15,3 +18,6 @@ app.get('/', (req, res) => {
     res.json({message: "Server is ready for requests"});
 });
 
+// Module routes 
+app.use('/api/posts/', postsRouter);
+app.use('/api/contentBlock/', contentBlockRouter);
