@@ -1,6 +1,6 @@
 import Email from "../models/Email.js";
 import { MY_EMAIL, MY_EMAIL_PASWORD } from "../../../config.js";
-import { nodemailer } from "nodemailer";
+import nodemailer from "nodemailer"
 import { validationResult } from "express-validator";
 
 export const controller = {};

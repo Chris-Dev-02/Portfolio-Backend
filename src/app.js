@@ -1,6 +1,7 @@
 import express from 'express';
 import morgan from 'morgan';
 // Importing routes
+//import { router as authRouter } from './modules/authentication/routes/user.routes.js';
 import { router as emailsRouter } from './modules/emails/routes/email.routes.js';
 import { router as postsRouter } from './modules/posts/routes/post.routes.js';
 import { router as contentBlockRouter } from './modules/posts/routes/contentBlock.routes.js';
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
 });
 
 // Module routes 
+//app.use('/api/auth/', authRouter);
 app.use('/api/email/', emailsRouter);
 app.use('/api/posts/', postsRouter);
 app.use('/api/contentBlock/', contentBlockRouter);
